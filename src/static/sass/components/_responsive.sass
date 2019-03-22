@@ -1,0 +1,90 @@
+
+
+@media only screen and (max-width: 600px)
+
+	.nav
+		&_burger
+			width: 35px
+			display: block
+			cursor: pointer
+		&_cross
+			float: right
+			display: block
+			width: 25px
+			cursor: pointer
+			margin: 17px 40px
+		&_list
+			display: block
+			width: 0
+			height: 100vh
+			position: fixed
+			top: 0
+			left: 0
+			overflow-x: hidden
+  		transition: width .5s
+			background: #333
+			z-index: 3
+			li
+				width: 100%
+				border-bottom: 1px solid #FF9D00
+				a
+					display: block
+					text-align: center
+					font-size: 1.8rem
+					padding: 20px 0
+					color: #ccc
+					&:hover
+						color: #FF9D00
+						background: #444
+
+	.home
+		&_intro
+			h1
+				font-size: 5rem
+	.about
+		&_image
+			grid-column: 3 / 11
+			img
+				margin-bottom: 30px
+		&_text
+			grid-column: 2 / 12
+
+	.skills
+		padding-bottom: 0
+		grid-template-columns: repeat(12, 1fr)
+		&_left
+			grid-column: 1 / 12
+			margin-bottom: 30px
+		&_right
+			grid-column: 1 / 12
+			margin-bottom: 30px
+
+	.cards
+		grid-column: 1 / 11
+		height: 300px
+
+	.footer
+		grid-template-columns: repeat(12, 1fr)
+		&_title
+			grid-column: 2 / 12
+		&_cta
+			grid-column: 2 / 12
+		&_social
+			display: none
+
+	.contact_form
+		grid-column: 2 / 12
+		input, select, textarea
+			grid-column: 1 / 4
+
+	@keyframes open
+		from
+			width: 0
+		to
+			width: 100vw
+
+	@keyframes close
+		from
+			width: 100vw
+		to
+			width: 0

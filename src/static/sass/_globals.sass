@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow')
+
+html, body
+	height: 100%
+	font-family: 'PT Sans', sans-serif
+
+.section
+	padding: 70px 0
+
+
+$light-color: #dddddd
+$dark-color: #333333
+$contrast-color: #0063FF
+$primary-color: #FF9D00
+
+
+=header-text($color, $size)
+	color: $color
+	font-size: $size
+	font-weight: bold
+	text-align: center
+	i
+		color: $primary-color
+
+=content-text($color, $size)
+	color: $color
+	font-size: $size
+	i
+		color: $primary-color
+
+
+
+=buttons
+	font-size: 1.2rem
+	text-transform: capitalize
+	padding: 15px 35px
+	display: inline-block
+	background: $contrast-color
+	color: #fff
+	text-decoration: none
+	border-radius: 5px
+	border: none
+	&:hover
+		background: $primary-color
+
+
+// BUTTON TO SCROLL BACK TO TOP
+.scrollup
+	display: none
+	color: #FF9D00
+	position: fixed
+	bottom: 20px
+	right: 20px
+	z-index: 15
+	transition: .3s ease-in-out
+	font-size: 1.8rem
+	&:hover
+		cursor: pointer
+		transform: scale(1.3)

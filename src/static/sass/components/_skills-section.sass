@@ -1,0 +1,136 @@
+
+.skills
+	background: url(../images/code.jpg) no-repeat center center fixed
+	background-size: cover
+	display: grid
+	grid-template-columns: repeat(12, 1fr)
+	&_header
+		+header-text($light-color, 2.5rem)
+		grid-column: 1 / 13
+		margin-bottom: 50px
+	&_left
+		grid-column: 2 / 6
+	&_right
+		grid-column: 8 / 12
+
+.bars
+	display: flex
+	margin-bottom: 15px
+	position: relative
+	img
+		width: 22px
+		height: 22px
+		margin: 0 20px
+	&_text
+		width: 100%
+
+.skill_bar
+	width: 100%
+	height: 15px
+	border-radius: 10px
+	position: relative
+	display: flex
+	align-items: center
+	&_container
+		display: flex
+		align-items: center
+	&_score
+		background: $primary-color
+		position: absolute
+		z-index: 0
+		height: 5px
+		border-radius: 10px
+	ul
+		display: flex
+		border-radius: 10px
+		width: 100%
+		position: absolute
+		z-index: 1
+	li
+		display: inline-block
+		height: 5px
+		width: 25%
+		border: 2px solid $dark-color
+		position: relative
+		span
+			+content-text($light-color, 1rem)
+			text-transform: capitalize
+			position: absolute
+			top: -30px
+			left: 10px
+	li:nth-child(1)
+		border-radius: 10px 0 0 10px
+	li:nth-child(4)
+		border-radius: 0 10px 10px 0
+
+.html
+	width: 95%
+
+.css
+	width: 95%
+
+.sass
+	width: 95%
+
+.js
+	width: 60%
+
+.python
+	width: 70%
+
+.flask
+	width: 60%
+
+.atom
+	width: 95%
+
+.pycharm
+	width: 80%
+
+.selenium
+	width: 80%
+
+.git
+	width: 75%
+
+.bootstrap
+	width: 80%
+
+.wp
+	width: 60%
+
+.xd
+	width: 75%
+
+.adesigner
+	width: 75%
+
+.gitbash
+	width: 75%
+
+.gulp
+	width: 75%
+
+
+.sql
+	width: 50%
+
+.tooltip
+	span
+		display: none
+		padding: 10px
+		margin-left: 60px
+		margin-top: -60px
+		width: 350px
+		line-height: 20px
+		h1
+			color: #FF9D00
+			margin-bottom: 10px
+	&:hover
+		span
+			display: inline
+			position: absolute
+			background: #444
+			border: 1px solid #FF9D00
+			color: #fff
+			z-index: 6

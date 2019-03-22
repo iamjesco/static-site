@@ -1,0 +1,22 @@
+{
+  "name": "iamjesco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "deploy": "gh-pages -d build"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://iamjesco.github.io/static-site",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
