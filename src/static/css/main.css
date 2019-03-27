@@ -555,7 +555,7 @@ html, body {
   position: relative;
   overflow: hidden;
   height: 350px;
-  min-width: 350px;
+  min-width: 300px;
   cursor: pointer;
   border: 1px solid #ccc;
   -webkit-transition: .3s ease-in;
@@ -910,8 +910,20 @@ html, body {
     grid-column: 2 / 12;
     line-height: 25px;
   }
+  .footer_social {
+    grid-column: 2 / 12;
+  }
   .footer_social li {
     margin: 0 10px;
+  }
+  .footer_social li a {
+    color: #ccc;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 9px 12px;
   }
   .contact_form {
     grid-column: 2 / 12;
