@@ -52,13 +52,23 @@
 	.skills
 		padding-bottom: 0
 		grid-template-columns: repeat(12, 1fr)
+		&_header
+			margin: 70px 0
 		&_left
-			grid-column: 1 / 12
+			grid-column: 2 / 12
 			margin-bottom: 30px
 		&_right
-			grid-column: 1 / 12
+			grid-column: 2 / 12
 			margin-bottom: 30px
-			
+		&_rightImg
+			display: none
+		&_leftImg
+			display: none
+
+	.tooltip
+		span
+			margin-left: 30px
+			width: 300px
 
 	.footer
 		grid-template-columns: repeat(12, 1fr)
@@ -66,8 +76,10 @@
 			grid-column: 2 / 12
 		&_cta
 			grid-column: 2 / 12
+			line-height: 25px
 		&_social
-			display: none
+			li
+				margin: 0 10px
 
 	.contact_form
 		grid-column: 2 / 12

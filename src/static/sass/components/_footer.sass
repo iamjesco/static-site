@@ -10,12 +10,19 @@
 		grid-column: 1 / 13
 		margin-bottom: 50px
 	&_cta
-		grid-column: 2 / 6
+		grid-column: 1 / 13
 		color: $light-color
+		text-align: center
+		font-size: 1.3rem
+		margin-bottom: 50px
 	&_social
+		grid-column: 5 / 9
+		margin: 70px
+		display: flex
+		justify-content: center
 		li
 			display: inline-block
-			margin-right: 20px
+			margin: 0 20px
 			a
 				color: #ccc
 				display: block
@@ -42,12 +49,12 @@
 				color: $primary-color
 
 .contact_form
-	grid-column: 7 / 12
+	grid-column: 5 / 9
 	display: grid
 	grid-template-columns: repeat(2, 1fr)
-	grid-gap: 10px
+	grid-gap: 20px
 	input, select, textarea
-		+content-text($dark-color, 1rem)
+		+content-text($dark-color, 1.3rem)
 		padding: 10px 0 10px 10px
 		border-radius: 5px
 		border: 1px solid #ff9d00

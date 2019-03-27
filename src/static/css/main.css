@@ -94,6 +94,10 @@ html, body {
   transition: .3s ease-in-out;
 }
 
+.nav_social {
+  display: none;
+}
+
 .nav_container {
   grid-column: 2 / 12;
   display: -webkit-box;
@@ -249,7 +253,7 @@ html, body {
 }
 
 .about_image {
-  grid-column: 2 / 6;
+  grid-column: 3 / 6;
 }
 
 .about_image img {
@@ -257,7 +261,7 @@ html, body {
 }
 
 .about_text {
-  grid-column: 7 / 12;
+  grid-column: 7 / 11;
   color: #333333;
   font-size: 1.125rem;
 }
@@ -294,6 +298,7 @@ html, body {
   background: url(../images/code.jpg) no-repeat center center fixed;
   background-size: cover;
   display: grid;
+  padding: 0;
   grid-template-columns: repeat(12, 1fr);
 }
 
@@ -302,8 +307,7 @@ html, body {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  grid-column: 1 / 13;
-  margin-bottom: 50px;
+  margin: 100px 0;
 }
 
 .skills_header i {
@@ -312,10 +316,24 @@ html, body {
 
 .skills_left {
   grid-column: 2 / 6;
+  margin-bottom: 70px;
 }
 
 .skills_right {
   grid-column: 8 / 12;
+  margin-bottom: 70px;
+}
+
+.skills_rightImg {
+  grid-column: 7 / 13;
+  background: url(../images/laptop-code.jpeg) no-repeat center center;
+  background-size: cover;
+}
+
+.skills_leftImg {
+  background: url(../images/wireframe.jpeg) no-repeat center center;
+  background-size: cover;
+  grid-column: 1 / 7;
 }
 
 .bars {
@@ -327,9 +345,9 @@ html, body {
 }
 
 .bars img {
-  width: 22px;
-  height: 22px;
-  margin: 0 20px;
+  width: 30px;
+  height: 30px;
+  margin: 0 20px 0 0;
   cursor: pointer;
 }
 
@@ -348,6 +366,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5px;
 }
 
 .skill_bar_container {
@@ -535,7 +554,7 @@ html, body {
   border: 1px solid #eee;
   position: relative;
   overflow: hidden;
-  height: 330px;
+  height: 350px;
   min-width: 350px;
   cursor: pointer;
   border: 1px solid #ccc;
@@ -581,10 +600,10 @@ html, body {
   background: #fff;
   font-size: .8rem;
   font-weight: lighter;
-  padding: 10px 20px 40px 20px;
+  padding: 20px 20px 40px 20px;
   position: absolute;
   height: 200px;
-  top: 260px;
+  top: 290px;
   -webkit-transition: .7s ease-in-out;
   transition: .7s ease-in-out;
 }
@@ -614,10 +633,6 @@ html, body {
   color: #FF9D00;
 }
 
-.cards:hover {
-  border: 1px solid #FF9D00;
-}
-
 .cards:hover .cards_content {
   top: 100px;
 }
@@ -627,7 +642,7 @@ html, body {
 }
 
 .card-1 {
-  background: url("../images/wireframe.png") no-repeat center center;
+  background: url("../images/tools.jpeg") no-repeat center center;
   background-size: cover;
 }
 
@@ -676,13 +691,27 @@ html, body {
 }
 
 .footer_cta {
-  grid-column: 2 / 6;
+  grid-column: 1 / 13;
   color: #dddddd;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 50px;
+}
+
+.footer_social {
+  grid-column: 5 / 9;
+  margin: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer_social li {
   display: inline-block;
-  margin-right: 20px;
+  margin: 0 20px;
 }
 
 .footer_social li a {
@@ -726,15 +755,15 @@ html, body {
 }
 
 .contact_form {
-  grid-column: 7 / 12;
+  grid-column: 5 / 9;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
+  grid-gap: 20px;
 }
 
 .contact_form input, .contact_form select, .contact_form textarea {
   color: #333333;
-  font-size: 1rem;
+  font-size: 1.3rem;
   padding: 10px 0 10px 10px;
   border-radius: 5px;
   border: 1px solid #ff9d00;
@@ -848,13 +877,26 @@ html, body {
     padding-bottom: 0;
     grid-template-columns: repeat(12, 1fr);
   }
+  .skills_header {
+    margin: 70px 0;
+  }
   .skills_left {
-    grid-column: 1 / 12;
+    grid-column: 2 / 12;
     margin-bottom: 30px;
   }
   .skills_right {
-    grid-column: 1 / 12;
+    grid-column: 2 / 12;
     margin-bottom: 30px;
+  }
+  .skills_rightImg {
+    display: none;
+  }
+  .skills_leftImg {
+    display: none;
+  }
+  .tooltip span {
+    margin-left: 30px;
+    width: 300px;
   }
   .footer {
     grid-template-columns: repeat(12, 1fr);
@@ -864,9 +906,10 @@ html, body {
   }
   .footer_cta {
     grid-column: 2 / 12;
+    line-height: 25px;
   }
-  .footer_social {
-    display: none;
+  .footer_social li {
+    margin: 0 10px;
   }
   .contact_form {
     grid-column: 2 / 12;
