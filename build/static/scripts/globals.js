@@ -1,6 +1,8 @@
 
 
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {
+	myFunction()
+};
 
 const nav = document.getElementById("navigation"),
 			sticky = nav.offsetTop,

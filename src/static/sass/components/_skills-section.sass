@@ -3,80 +3,132 @@
 	background: url(../images/code.jpg) no-repeat center center fixed
 	background-size: cover
 	display: grid
-	padding: 0
 	grid-template-columns: repeat(12, 1fr)
 	&_header
 		+header-text($light-color, 2.5rem)
-		margin: 100px 0
-	&_left
-		grid-column: 2 / 6
-		margin-bottom: 70px
-	&_right
-		grid-column: 8 / 12
-		margin-bottom: 70px
-	&_rightImg
-		grid-column: 7 / 13
-		background: url(../images/laptop-code.jpeg) no-repeat center center
-		background-size: cover
-	&_leftImg
-		background: url(../images/wireframe.jpeg) no-repeat center center
-		background-size: cover
-		grid-column: 1 / 7
+		grid-column: 1 / 13
+		margin-bottom: 50px
 
-
-.bars
+.skills_container
+	grid-column: 1 / 13
 	display: flex
-	margin-bottom: 15px
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: center
+
+.chart_container
+	width: 200px
+	height: 200px
+	margin: 20px 20px 60px 20px
 	position: relative
 	img
-		width: 30px
-		height: 30px
-		margin: 0 20px 0 0
-		cursor: pointer
-	&_text
-		width: 100%
+		position: absolute
+		z-index: 5
+		left: 50%
+		top: 50px
+		width: 100px
+		height: 100px
+		margin-left: -50px
 
-.skill_bar
-	width: 100%
-	height: 15px
-	border-radius: 10px
-	position: relative
-	display: flex
+.chart
+	position: absolute
+	display: grid
+	justify-content: center
 	align-items: center
-	margin-top: 5px
-	&_container
-		display: flex
-		align-items: center
-	&_score
-		background: $primary-color
-		position: absolute
-		z-index: 0
-		height: 5px
-		border-radius: 10px
-	ul
-		display: flex
-		border-radius: 10px
-		width: 100%
-		position: absolute
-		z-index: 1
-	li
-		display: inline-block
-		height: 5px
-		width: 25%
-		border: 2px solid $dark-color
-		position: relative
-		span
-			+content-text($light-color, 1rem)
-			text-transform: capitalize
-			position: absolute
-			top: -30px
-			width: 100%
-	li:nth-child(1)
-		border-radius: 10px 0 0 10px
-	li:nth-child(4)
-		border-radius: 0 10px 10px 0
-		span
-			text-align: right
+	&_background
+		fill: transparent
+		stroke: #eee
+		stroke-width: 2px
+		stroke-linecap: square
+	&_circle
+		transform: rotate(-90deg)
+		transform-origin: center
+		stroke: #FF9D00
+		stroke-width: 0px
+	&_label
+		color: #fff
+		margin-top: 210px
+		text-align: center
+		font: normal 1.2rem 'Helvetica'
+
+.animate
+	animation: circle-chart-fill 2s reverse
+	stroke-width: 2px
+
+@keyframes circle-chart-fill
+	to
+		stroke-dasharray: 0 100
+
+
+	//&_left
+	//	grid-column: 2 / 6
+	//	margin-bottom: 70px
+	//&_right
+	//	grid-column: 8 / 12
+	//	margin-bottom: 70px
+	//&_rightImg
+	//	grid-column: 7 / 13
+	//	background: url(../images/laptop-code.jpeg) no-repeat center center
+	//	background-size: cover
+	//&_leftImg
+	//	background: url(../images/wireframe.jpeg) no-repeat center center
+	//	background-size: cover
+	//	grid-column: 1 / 7
+
+
+//.bars
+//	display: flex
+//	margin-bottom: 15px
+//	position: relative
+//	img
+//		width: 30px
+//		height: 30px
+//		margin: 0 20px 0 0
+//		cursor: pointer
+//	&_text
+//		width: 100%
+//
+//.skill_bar
+//	width: 100%
+//	height: 15px
+//	border-radius: 10px
+//	position: relative
+//	display: flex
+//	align-items: center
+//	margin-top: 5px
+//	&_container
+//		display: flex
+//		align-items: center
+//	&_score
+//		background: $primary-color
+//		position: absolute
+//		z-index: 0
+//		height: 5px
+//		border-radius: 10px
+//	ul
+//		display: flex
+//		border-radius: 10px
+//		width: 100%
+//		position: absolute
+//		z-index: 1
+//	li
+//		display: inline-block
+//		height: 5px
+//		width: 25%
+//		border: 2px solid $dark-color
+//		position: relative
+//		span
+//			+content-text($light-color, 1rem)
+//			text-transform: capitalize
+//			position: absolute
+//			top: -30px
+//			width: 100%
+//	li:nth-child(1)
+//		border-radius: 10px 0 0 10px
+//	li:nth-child(4)
+//		border-radius: 0 10px 10px 0
+//		span
+//			text-align: right
 
 .html
 	width: 95%

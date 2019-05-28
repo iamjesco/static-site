@@ -1,6 +1,9 @@
 
 
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {
+	myFunction();
+	charts();
+};
 
 const nav = document.getElementById("navigation"),
 			sticky = nav.offsetTop,
@@ -44,6 +47,17 @@ function myFunction() {
 	}
 }
 
+
+function charts() {
+	if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+		let charts = document.getElementsByClassName("chart_circle");
+		for(let i = 0; i < charts.length; i++)
+		{
+			charts[i].classList.add('animate');
+		}
+		// document.getElementById("html").classList.add("animate");
+	}
+}
 
 // FUNCTION TO ACTIVATE BURGER MENU
 document.getElementById("nav_burger").addEventListener("click", openNav);

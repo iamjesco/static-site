@@ -298,7 +298,6 @@ html, body {
   background: url(../images/code.jpg) no-repeat center center fixed;
   background-size: cover;
   display: grid;
-  padding: 0;
   grid-template-columns: repeat(12, 1fr);
 }
 
@@ -307,126 +306,96 @@ html, body {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  margin: 100px 0;
+  grid-column: 1 / 13;
+  margin-bottom: 50px;
 }
 
 .skills_header i {
   color: #FF9D00;
 }
 
-.skills_left {
-  grid-column: 2 / 6;
-  margin-bottom: 70px;
-}
-
-.skills_right {
-  grid-column: 8 / 12;
-  margin-bottom: 70px;
-}
-
-.skills_rightImg {
-  grid-column: 7 / 13;
-  background: url(../images/laptop-code.jpeg) no-repeat center center;
-  background-size: cover;
-}
-
-.skills_leftImg {
-  background: url(../images/wireframe.jpeg) no-repeat center center;
-  background-size: cover;
-  grid-column: 1 / 7;
-}
-
-.bars {
+.skills_container {
+  grid-column: 1 / 13;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 15px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.chart_container {
+  width: 200px;
+  height: 200px;
+  margin: 20px 20px 60px 20px;
   position: relative;
 }
 
-.bars img {
-  width: 30px;
-  height: 30px;
-  margin: 0 20px 0 0;
-  cursor: pointer;
+.chart_container img {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 50px;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
 }
 
-.bars_text {
-  width: 100%;
-}
-
-.skill_bar {
-  width: 100%;
-  height: 15px;
-  border-radius: 10px;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 5px;
-}
-
-.skill_bar_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.chart {
+  position: absolute;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.skill_bar_score {
-  background: #FF9D00;
-  position: absolute;
-  z-index: 0;
-  height: 5px;
-  border-radius: 10px;
+.chart_background {
+  fill: transparent;
+  stroke: #eee;
+  stroke-width: 2px;
+  stroke-linecap: square;
 }
 
-.skill_bar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 10px;
-  width: 100%;
-  position: absolute;
-  z-index: 1;
+.chart_circle {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  stroke: #FF9D00;
+  stroke-width: 0px;
 }
 
-.skill_bar li {
-  display: inline-block;
-  height: 5px;
-  width: 25%;
-  border: 2px solid #333333;
-  position: relative;
+.chart_label {
+  color: #fff;
+  margin-top: 210px;
+  text-align: center;
+  font: normal 1.2rem 'Helvetica';
 }
 
-.skill_bar li span {
-  color: #dddddd;
-  font-size: 1rem;
-  text-transform: capitalize;
-  position: absolute;
-  top: -30px;
-  width: 100%;
+.animate {
+  animation: circle-chart-fill 2s reverse;
+  stroke-width: 2px;
 }
 
-.skill_bar li span i {
-  color: #FF9D00;
+@-webkit-keyframes circle-chart-fill {
+  to {
+    stroke-dasharray: 0 100;
+  }
 }
 
-.skill_bar li:nth-child(1) {
-  border-radius: 10px 0 0 10px;
-}
-
-.skill_bar li:nth-child(4) {
-  border-radius: 0 10px 10px 0;
-}
-
-.skill_bar li:nth-child(4) span {
-  text-align: right;
+@keyframes circle-chart-fill {
+  to {
+    stroke-dasharray: 0 100;
+  }
 }
 
 .html {
